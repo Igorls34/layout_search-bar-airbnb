@@ -1,1 +1,91 @@
-/* add styles here */
+/* 1. Reset e Definições Globais */
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: Avenir;
+  src: url('./fonts/Avenir-Book.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Avenir;
+  src: url('./fonts/Avenir-Heavy.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Avenir, sans-serif;
+  font-weight: 300;
+  background-color: #fff;
+}
+
+/* 2. Estrutura do Formulário (Container) */
+.search-bar {
+  display: block;
+  width: 100%; /* Voltando para 100% conforme solicitado */
+  padding: 0;
+}
+
+.search-bar--big {
+  margin: 20px 0 0;
+}
+
+.search-bar--small {
+  margin: 20px 0 0;
+}
+
+/* 3. Elemento de Input Base */
+.search-bar__input {
+  width: 100%;
+  border-radius: 4px;
+  outline: none;
+  border: 1px solid #e1e7ed;
+  background-color: #fff;
+  font-family: Avenir, sans-serif;
+  color: #3d4e61;
+  background-image: url('./images/Search.svg');
+  background-repeat: no-repeat;
+  line-height: normal;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+/* 4. Variação: Barra Grande (Big - 70px) */
+.search-bar--big .search-bar__input {
+  height: 70px;
+  padding: 0 20px 0 52px;
+  font-size: 16px;
+  background-size: 19px;
+  background-position: 16px center;
+}
+
+/* 5. Variação: Barra Pequena (Small - 42px) */
+.search-bar--small .search-bar__input {
+  height: 42px;
+  padding: 0 15px 0 35px;
+  font-size: 14px;
+  background-size: 11px;
+  background-position: 11px center;
+}
+
+/* 6. Estados de Interação */
+.search-bar__input:hover {
+  box-shadow: 0 4px 4px 0 #00000040;
+}
+
+.search-bar__input:focus {
+  font-weight: 700;
+  box-shadow: 0 1px 8px 0 #3d4e611a;
+}
+
+.search-bar__input:focus::placeholder {
+  font-weight: 300;
+  color: #3d4e61;
+}
